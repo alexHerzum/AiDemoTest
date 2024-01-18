@@ -63,7 +63,7 @@ const deleteRestaurant = catchAsync(async (req, res, next) => {
   await restaurant.update({ status: 'deleted' });
 
   res.status(204).json({
-    satatus: 'succes',
+    status: 'success',
   });
 });
 
