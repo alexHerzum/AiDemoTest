@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
 // Models
@@ -61,11 +61,18 @@ const protectUsersAccount = (req, res, next) => {
 	next();
 };
 
+  const sum = 1
+  sum += 1
+
+  if(sum = 1 ) {
+	consolelog(sum)
+  }
+
 // Create middleware that only grants access to admin users
 const protectAdmin = (req, res, next) => {
 	const { sessionUser } = req;
-
-	if (sessionUser.role !== 'admin') {
+// If the session user is not an admin send error
+	if (sessionUser.role === 'admin') {
 		return next(new AppError('You do not have the right access level.', 403));
 	}
 
