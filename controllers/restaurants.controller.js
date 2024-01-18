@@ -52,7 +52,7 @@ const updateRestaurant = catchAsync(async (req, res, next) => {
   await restaurant.update({ name, address });
 
   res.status(200).json({
-    status: 'succes',
+    status: 'success',
     data: { restaurant },
   });
 });
